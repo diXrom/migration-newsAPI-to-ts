@@ -1,5 +1,5 @@
-import INews from './news/interfaceNews';
-import ISources from './sources/interfaceSources';
+import INews from './interfaceNews';
+import ISources from './interfaceSources';
 
 export interface IResponseNews {
     articles: INews[];

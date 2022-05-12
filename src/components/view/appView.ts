@@ -1,6 +1,6 @@
 import News from './news/news';
 import Sources from './sources/sources';
-import { IResponseNews, IResponseSources } from './interfacesAppView';
+import { IResponseNews, IResponseSources } from '../../interfaces/interfacesAppView';
 
 export class AppView {
     constructor(private news: News = new News(), private sources: Sources = new Sources()) {}

@@ -1,5 +1,5 @@
-import getElement from '../../services/getElem';
-import ISources from './interfaceSources';
+import getElement from '../../../helpers/getElem';
+import ISources from '../../../interfaces/interfaceSources';
 import './sources.css';
 
 class Sources {

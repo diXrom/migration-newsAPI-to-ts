@@ -1,6 +1,6 @@
 import './news.css';
-import getElement from '../../services/getElem';
-import INews from './interfaceNews';
+import getElement from '../../../helpers/getElem';
+import INews from '../../../interfaces/interfaceNews';
 
 class News {
     draw(data: INews[]) {
@@ -10,9 +10,9 @@ class News {
         const newsItemTemp = getElement<HTMLTemplateElement>('#newsItemTemp');
 
         news.forEach((item, idx) => {
-            const newsClone = <HTMLDivElement>newsItemTemp.content.cloneNode(true);
+            const newsClone = <HTMLElement>newsItemTemp.content.cloneNode(true);
 
-            if (idx % 2) getElement<HTMLDivElement>('.news__item', newsClone).classList.add('alt');
+            if (idx % 2) getElement('.news__item', newsClone).classList.add('alt');
 
             getElement('.news__meta-photo', newsClone).style.backgroundImage = `url(${
                 item.urlToImage || 'img/news_placeholder.jpg'
