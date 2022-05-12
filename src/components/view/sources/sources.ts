@@ -1,20 +1,24 @@
+import getElement from '../../services/getElem';
+import ISources from './interfaceSources';
 import './sources.css';
 
 class Sources {
-    draw(data) {
+    draw(data: ISources[]) {
+        const sources = data.length >= 9 ? data.filter((_item, idx) => idx < 9) : data;
+
         const fragment = document.createDocumentFragment();
-        const sourceItemTemp = document.querySelector('#sourceItemTemp');
+        const sourceItemTemp = getElement<HTMLTemplateElement>('#sourceItemTemp');
 
-        data.forEach((item) => {
-            const sourceClone = sourceItemTemp.content.cloneNode(true);
+        sources.forEach((item) => {
+            const sourceClone = <HTMLDivElement>sourceItemTemp.content.cloneNode(true);
 
-            sourceClone.querySelector('.source__item-name').textContent = item.name;
-            sourceClone.querySelector('.source__item').setAttribute('data-source-id', item.id);
+            getElement('.source__item-name', sourceClone).textContent = item.name;
+            getElement('.source__item', sourceClone).setAttribute('data-source-id', item.id);
 
             fragment.append(sourceClone);
         });
 
-        document.querySelector('.sources').append(fragment);
+        getElement('.sources').append(fragment);
     }
 }
 
