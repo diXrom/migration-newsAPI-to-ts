@@ -3,7 +3,10 @@ import IResponseConfig from '../../interfaces/interfaceLoader';
 class Loader {
     constructor(private baseLink: string, private options: { apiKey: string }) {}
 
-    getResp<T>(responseConfig: IResponseConfig, callback = () => console.error('No callback for GET response')) {
+    getResp<T>(
+        responseConfig: IResponseConfig,
+        callback: (data: T) => void = () => console.error('No callback for GET response')
+    ) {
         this.load<T>('GET', callback, responseConfig);
     }
     errorHandler(res: Response) {

@@ -1,7 +1,6 @@
 export default interface IResponseConfig {
     endpoint: string;
-    options: {
+    options?: {
         sources?: string;
-        apiKey?: string;
     };
 }
