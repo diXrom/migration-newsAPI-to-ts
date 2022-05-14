@@ -1,2 +1,3 @@
-# migration-newsAPI-to-ts
-The News API is a simple HTTP REST API for searching and retrieving news from the entire web.
+- Application migration tasks JS to TS: [Fork](https://github.com/Pulya10c/news-JS)
+- The News API is a simple HTTP REST API for searching and retrieving news from the entire web.
+- [Deploy](https://dixrom.github.io/migration-newsAPI-to-ts/)
