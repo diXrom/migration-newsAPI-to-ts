@@ -24,6 +24,9 @@ class AppController extends AppLoader {
             target = target.parentNode;
         }
     }
+    postFirstNews<T>(callback: (data: T) => void) {
+        super.getResp<T>({ endpoint: 'everything', options: { sources: 'abc-news' } }, callback);
+    }
 }
 
 export default AppController;

@@ -10,6 +10,7 @@ class App {
         getElem('.sources').addEventListener('click', (e) =>
             this.controller.getNews<IResponseNews>(e, (data) => this.view.drawNews(data))
         );
+        this.controller.postFirstNews<IResponseNews>((data) => this.view.drawNews(data));
         this.controller.getSources<IResponseSources>((data) => this.view.drawSources(data));
     }
 }
