@@ -2,8 +2,8 @@ import Loader from './loader';
 
 class AppLoader extends Loader {
     constructor() {
-        super('https://newsapi.org/v2/', {
-            apiKey: '25f01c7af9f444aabffb501c18d5f968',
+        super('https://nodenews.herokuapp.com/', {
+            apiKey: '4d21297620864dcaa868ba5eccb50597',
         });
     }
 }

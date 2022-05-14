@@ -5,7 +5,7 @@ import './sources.css';
 
 class Sources {
     draw(data: ISources[]) {
-        const sources = data.length >= 9 ? data.filter((_item, idx) => idx < 9) : data;
+        const sources = data.length >= 50 ? data.filter((_item, idx) => idx < 50) : data;
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = getElement<HTMLTemplateElement>('#sourceItemTemp');
 
