@@ -1,35 +1,120 @@
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+@media (max-width: 425px) {
+    html {
+        font-size: 13px;
+    }
+}
 body {
+    display: grid;
+    align-items: start;
+    grid-template-rows: 100px 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+    gap: 1rem;
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
+    margin: 0 auto;
+    max-width: 1480px;
+    padding: 0 40px;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#000000),
+        color-stop(40%, #0f4387),
+        color-stop(80%, #5fc0ff)
+    );
+    background: linear-gradient(90deg, #000000 0%, #0f4387 40%, #5fc0ff 80%);
+}
+@media (max-width: 768px) {
+    body {
+        grid-template-rows: 70px 1fr auto;
+        padding: 0 15px;
+    }
 }
 
 header {
-    padding: 10px 30px;
+    padding: 0 30px;
+}
+@media (max-width: 1530px) {
+    header {
+        padding: 0;
+    }
 }
 
 header h1 {
-    font-size: 40px;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 2.3rem;
     font-weight: 800;
 }
-
 footer {
-    height: 100px;
+    padding: 0 30px;
+}
+.footer__content {
+    margin: 0 auto;
+    max-width: 1420px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
 }
-footer .copyright {
-    font-size: 14px;
-    color: #333;
-    text-align: center;
+
+@media (max-width: 800px) {
+    .footer__content {
+        flex-direction: column;
+        font-size: 1.5rem;
+        align-items: center;
+    }
 }
-footer .copyright a {
-    color: #444;
+
+.footer__copy {
+    color: #ffffff;
 }
-footer .copyright a:hover {
-    color: #555;
+
+.footer__copy span {
+    margin-right: 1rem;
 }
-footer .copyright:before {
-    content: '©';
+
+@media (max-width: 800px) {
+    .footer__copy span {
+        margin-right: 0.5rem;
+    }
+}
+
+.footer__copy a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer__copy a:hover {
+    color: #000000;
+}
+
+@media (max-width: 800px) {
+    .footer__copy a {
+        margin-right: 0;
+    }
+}
+
+.footer__rss {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__rss a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.footer__rss a:hover {
+    color: #ffffff;
 }
